@@ -1,0 +1,100 @@
+.header-wrapper {
+	@include outer-container();
+	.header-container {
+		@include span-columns(12);
+		.title-container {
+			@include span-columns(10 of 12);
+			@include shift(1);
+			@include media($desktop) {
+				@include span-columns(8 of 12);
+				@include shift(2);
+			}
+		}
+	}
+}
+.story-wrapper {
+	@include outer-container();
+	.nav-bar {
+		ul {
+			@include span-columns(12);
+			@include pad(0);
+			li {
+				@include span-columns(12 of 12);
+				@include media($desktop) {
+					@include span-columns(3 of 12);
+					@include omega(4n);
+				}
+			}
+		}
+	}
+	.story-container {
+		@include span-columns(12);
+		.prose {
+			@include span-columns(12);
+			@include media($desktop) {
+				@include span-columns(8 of 12);
+				@include shift(2);
+			}
+			.small-block {
+				@include media($desktop) {
+					@include span-columns(4 of 8);
+					// @include pad(1em);
+				}
+			}
+		}
+		.media {
+			@include span-columns(12);
+			.big-block {
+				@include media($desktop) {
+					@include span-columns(8 of 12);
+				}
+			}
+			.small-block {
+				@include media($desktop) {
+					@include span-columns(4 of 12);
+				}
+			}
+		}
+		.about {
+			@include span-columns(12);
+			@include media($desktop) {
+				@include span-columns(8 of 12);
+				@include shift(2);
+			}
+			ul {
+				@include pad(0);
+				li {
+					@include span-columns(12 of 12);
+					@include media($desktop) {
+						@include span-columns(4 of 8);
+						@include omega(2n);
+					}
+				}
+			}
+		}
+	}
+	.worker-faces {
+		@include span-columns(12);
+		@include media($desktop) {
+			@include span-columns(7);
+		}
+	}
+	.worker-wall {
+		@include span-columns(12);
+		@include media($desktop) {
+			@include span-columns(5);
+			@include omega();
+		}		
+	}  		
+}
+	
+
+.footer-container {
+	@include outer-container;
+	@include media($desktop) {
+      div {
+        @include span-columns(3 of 12);
+      }
+    }
+}
+	

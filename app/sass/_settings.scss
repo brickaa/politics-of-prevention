@@ -1,0 +1,41 @@
+// breakpoints
+$desktop: new-breakpoint(min-width 768px 12);
+$full_width: new-breakpoint(min-width 1088px 12);
+$mobile: new-breakpoint(max-width 480px);
+
+// fonts
+$boldHeaderFont: $helvetica;
+$textFont: $georgia;
+$chartFont: $helvetica;
+
+// colors
+$white: rgb(255, 255, 255);
+$offblack: rgb(34, 34, 34);
+$offwhite: rgb(238, 238, 238);
+$navBlack: rgb(17, 17, 17);
+
+$lt_gray: rgb(102, 102, 102);
+$dk_gray: rgb(51, 51, 51);
+
+
+// trib colors
+$yellow: rgb(255, 194, 0);
+$teal: rgb(0, 137, 144);
+$lt_teal: rgba(0, 137, 144, 0.5);
+$dk_teal: rgba(0, 137, 144, 0.9);
+$violet: rgb(116, 46, 102);
+$lightviolet: rgb(153, 61, 136);
+$purple: rgb(159, 130, 187);
+$lavender: rgb(231, 222, 238);
+
+
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

@@ -1,0 +1,340 @@
+// bower:scss
+@import "../../bower_components/bourbon/dist/_bourbon.scss";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
+// endbower 
+
+//colors
+$fontColor: #fff;
+$tt_copper: #929aa3;
+$tt_copper_rgba: rgba(146,154,163,0.5);
+$borderColor: #b3b3b3;
+$mainbackgroundColor: #E6E6E6;
+$trib_yellow: #FCC10F;
+$grey: #888;
+
+$font: 100% Helvetica, sans-serif;
+$height: 500px;
+
+body {
+	@include outer-container;
+	font-family: $helvetica;
+	background-color: #fff;
+}
+
+.header-container {
+	@include span-columns(12);
+	max-width:100%;
+	background-image: url(http://www.placekitten.com/1397/600);
+	display:inline-block;
+	vertical-align: middle;
+	height: $height;
+	font: $font;
+	color: $fontColor;
+	text-align: center;
+	text-shadow: 2px 2px 2px #000;	
+		#title-header {
+			@include span-columns(8);
+			@include shift(2);	
+			.header {
+				margin-top: 20%;
+				display:inline-block;
+				width: 100%;
+				h1 {
+					font-size: 100px;
+					text-transform: uppercase;
+					display: block;
+					margin: auto;
+				}
+				h3 {
+					display: block;
+					font-size: 20px;
+					font-style: italic;
+					margin-bottom: 10%;
+				}
+				
+			}
+		}
+		#nav-header{
+			@include span-columns(12);
+			z-index: 1;
+			background: $tt_copper_rgba;
+			width: 100%;
+			ul {
+				@include outer-container;
+				height:100%;
+				margin: 0;
+				list-style-type: none;
+				li.block {
+					@include span-columns(3);
+					display: inline;
+					margin-top: 1em;
+					margin-right: 0;
+					a {
+						color: $trib_yellow;
+						text-decoration: none;
+						}
+					}
+				}
+			.logo {
+				margin-right: 1em;
+					img {
+						max-height: 25px;
+						max-width:100%;
+						vertical-align: text-bottom;
+						float:right;
+						}
+				}	
+			}
+		}	
+.story-container {	
+	@include outer-container();
+	background-color: #fff;
+	font: $font;
+	color: #000;
+	display: block;
+	.story-body {
+		@include span-columns(10);
+		@include shift(1);
+		.headline {
+			margin: 0.25em 0;
+			font-size: 1.5em;
+			font-weight: 700;
+			line-height: 1;
+		}
+		.byline {
+			h3 {
+				margin: 0.5em 0 0.5em 0;
+				font-size: 0.75em;
+				padding: 0;
+				font-style: italic;
+				font-weight: none;
+				color: $grey;
+				float: left;
+			}
+		}
+		hr {
+			display: block;
+			height: 1px;
+			border: 0;
+			border-top: 1px solid $trib_yellow;
+		}
+		.story {
+			p {
+				@include span-columns(6 of 10);
+				@include shift(2);
+				font-size: 16px;
+				line-height: 26px;
+				.caption {
+					font-size: 11px;
+					margin: 5px;
+					line-height: 1;
+					font-style: italic;
+					color: $grey;
+				}
+			}
+			.left {
+				@include span-columns(10);
+				img {
+					width: 60%;
+					float: left;
+				}
+				p {
+					font-size: 12px;
+					margin: 5px 0;
+					line-height: 1;
+					font-style: italic;
+					color: $grey;
+				}
+				h2 {
+					float: right;
+					width: 35%;
+				}
+			}
+			.right {
+				@include span-columns(8 of 10);
+				@include shift(1);
+				img {
+					width: 60%;
+					float: right;
+				}
+				p {
+					font-size: 12px;
+					margin: 5px 0; 
+					line-height: 1;
+					font-style: italic;
+					color: $grey;
+					float: right;
+				}
+				h2 {
+					float: left;
+					width: 35%;
+				}
+			}
+			.middle {
+				@include span-columns(8 of 10);
+				@include shift(1);
+			}
+		}
+	}
+}
+
+//smartphones
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.header-container {
+		@include span-columns(12);
+		max-width:	480px;
+		width: 100%;
+		background-image: url(http://www.placekitten.com/480/680);
+		display:inline-block;
+		vertical-align: middle;
+		height: $height;
+		font: $font;
+		color: $fontColor;
+		text-align: center;
+		text-shadow: 2px 2px 2px #000;	
+		.title-block {
+			@include span-columns(10);
+			@include shift(1);	
+			.header {
+				margin-top: 20%;
+				display:inline-block;
+				width: 100%;
+				h1 {
+					font-size: 60px;
+					text-transform: uppercase;
+					display: block;
+					margin: auto;
+				}
+				h3 {
+					display: block;
+					font-size: 16px;
+					font-style: italic;
+					margin-bottom: 10%;
+				}
+				
+			}
+		}
+		#nav-header{
+			@include span-columns(12);
+			z-index: 1;
+			background: $tt_copper_rgba;
+			width: 100%;
+			ul {
+				@include outer-container;
+				height:100%;
+				margin: 0;
+				list-style-type: none;
+				li.block {
+					display: block;
+					margin-top: .25em;
+					margin-right: 0;
+					a {
+						color: $trib_yellow;
+						text-decoration: none;
+						}
+					}
+				li.image {
+						margin-right: 1em;
+						img {
+						max-height: 25px;
+						max-width:100%;
+						vertical-align: text-bottom;
+						float:right;
+						}
+					}
+				}
+			}
+		}	
+	#story-container {	
+		@include span-columns(12);
+		max-width:	480px;
+		width: 100%;
+		background-color: #fff;
+		font: $font;
+		color: #000;
+		.story-body {
+			max-width:	470px;
+			margin: 0;
+			width: 95%;
+			.headline {
+				margin: 0.25em 0;
+				font-size: 1em;
+				font-weight: 700;
+				line-height: 1;
+			}
+			.byline {
+				h3 {
+					margin: 0.5em 0 0.5em 0;
+					font-size: 0.75em;
+					padding: 0;
+					font-style: italic;
+					font-weight: none;
+					color: $grey;
+					float: left;
+				}
+			}
+			hr {
+				display: block;
+				height: 1px;
+				border: 0;
+				border-top: 1px solid $trib_yellow;
+			}
+			.story {
+			p {
+				@include span-columns(12);
+				width: 100%;
+				font-size: 16px;
+				line-height: 26px;
+				.caption {
+					font-size: 11px;
+					margin: 5px;
+					line-height: 1;
+					font-style: italic;
+					color: $grey;
+				}
+			}
+			.left {
+				@include span-columns(12);
+				img {
+					width: 100%;
+					float: none;
+				}
+				p {
+					font-size: 12px;
+					margin: 5px 0;
+					line-height: 1;
+					font-style: italic;
+					color: $grey;
+				}
+				h2 {
+					float: right;
+					width: 100%;
+				}
+			}
+			.right {
+				@include span-columns(12);
+				width: 100%;
+				img {
+					width: 100%;
+					float: none;				}
+				p {
+					font-size: 12px;
+					margin: 5px 0; 
+					line-height: 1;
+					font-style: italic;
+					color: $grey;
+					float: right;
+				}
+				h2 {
+					float: none;
+					width: 100%;
+				}
+			}
+			.middle {
+				@include span-columns(12);
+				width: 100%;
+			}
+			}
+		}
+	}
+}
