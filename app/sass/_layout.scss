@@ -54,6 +54,11 @@
 					@include span-columns(4 of 12);
 				}
 			}
+			.half-block {
+				@include media($desktop) {
+					@include span-columns(6 of 12);
+				}
+			}
 		}
 		.about {
 			@include span-columns(12);
