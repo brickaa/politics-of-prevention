@@ -338,7 +338,9 @@ body {
 			}
 		}
 	}
-	.shareline {
+	
+}
+.shareline {
 		h3 {
 			padding-bottom: 0.75em;
 			border-bottom: 1px solid rgb(204, 204, 204);
@@ -460,50 +462,10 @@ body {
 			color: $lt_gray;
 		}
 	}
-}
 .hide {
 	display: none;
 }
-.worker-faces {	
-	padding-left: 0.5em;
-}
-.worker-wall {
-	margin: 1em 0;
-	p.subtext {
-		color: rgb(34, 34, 34);
-		font: 300 0.9em helvetica; 
-		line-height: 1.4em; 
-		text-align: left; 
-		margin: 1em 0;
-	}
-	@include media($desktop) {
-		border-left: 1px solid $yellow;
-		border-top: 1px solid $yellow;
-		padding-left: 1.5em;
-	}
-	.worker-names {	
-		ul {
-			line-height: 1em;
-			list-style-type: none;
-			color: $lt_gray;
-			padding-left: 0;
-			font: 400 0.65em Helvetica;
-			margin-bottom: 0.5em;
-			li {
-				&:active {
-					color: $navBlack;
-					background-color: #fce598;
-					font-weight: bold;
-				}
-				&:hover {
-					color: $navBlack;
-					background-color: #fce598;
-					font-weight: bold;
-				}
-			}
-		}
-	}
-}
+
 .footer {
 	background-color: rgb(34, 34, 34);
 	color: $white;
