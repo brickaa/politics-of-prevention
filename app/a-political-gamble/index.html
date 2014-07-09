@@ -83,7 +83,7 @@
     <!-- Static navigation bar -->
     <div class="nav-bar nav-images">
       <ul>
-        <li class="selected">
+        <li>
             <!-- Add class="selected" to <li> of active page -->
             <div class="nav-link">
               New Limits, More Money
@@ -100,7 +100,7 @@
             <!-- <p><em>Coming DATE</em></p> -->            
           </a>
       </li>
-        <li>
+        <li class="selected">
            <a href="http://apps.texastribune.org/hurting-for-work/a-twisted-system">
             <div class="nav-link">
               A Political Gamble
@@ -122,7 +122,7 @@
     <!-- Sticky nav -->
     <div id="nav-bar" class="nav-bar sticky nav-hide">
       <ul>
-        <li class="selected">
+        <li>
           <a href="../disposable-workforce">
             <div class="nav-link">
               New Limits, More Money
@@ -136,7 +136,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li class="selected">
           <a href="http://apps.texastribune.org/hurting-for-work/a-twisted-system">
             <div class="nav-link">
               A Political Gamble
@@ -155,8 +155,8 @@
 
     <!-- Story Body -->
     <div class="story-container">
-      <h1>While Abortion Faces New Limits, Women's Health Gets a Financial Boost</h1>
-      <p class="byline">By <a href="http://www.texastribune.org/about/staff/becca-aaronson/">Becca Aaronson</a> | August 9, 2013</p>
+      <h1>Claims Drop Under State-Run Women's Health Program</h1>
+      <p class="byline">By <a href="http://www.texastribune.org/about/staff/becca-aaronson/">Becca Aaronson</a> | December 13, 2013</p>
       <div class="prose">
         <!-- "prose" sets 8-column width on desktop -->
         <div class="shareline">
@@ -185,13 +185,33 @@
         <p>To stop Planned Parenthood clinics from receiving public financing, Texas&rsquo; Republican leaders gambled that the state could operate a contraception and cancer-screening program for low-income women without tens of millions of federal dollars.</p>
         <p>But with the exclusion of roughly&nbsp;</span><span>40 Planned Parenthood clinics, none of which performed abortions, from the program in 2013, records show claims for birth control and wellness exams dropped, as did enrollment numbers. </p>
         <p>State health officials relaunched the Medicaid Women&rsquo;s Health Program as the Texas Woman&rsquo;s Health Program in January after the federal government discontinued its $9-to-$1 match for the program &mdash;&nbsp;a decision the Obama administration made when state lawmakers began enforcing rules they said excluded clinics even loosely affiliated with abortion providers from receiving taxpayer dollars. (By law, none of the providers in the program performed abortions.) </p>
+      </div>
+              <!-- Media: Big image LEFT; Small block quote RIGHT; -->
+      <div class="media">
+        <!-- Image -->
+        <div class="big-block">
+          <img src="http://placekitten.com/717/488" alt="Photo by Justin Dehn.">
+          <p class="caption">Photo by Justin Dehn.</p>
+        </div>
+        <!-- Block quote -->
+        <div class="small-block block-text">
+          <div>
+            <h2 class="left">&ldquo;There can still be some pockets where we don&rsquo;t have a provider and we did before.&rdquo;</h2>
+            <p>&mdash; Dr. Kyle Janek, Texas Health and Human Services Commissioner</p>
+          </div>
+        </div>
+      </div>
+      <div class="prose">        
         <p>The new state-financed program got off to a rocky start. In some parts of Texas, the state&rsquo;s health agency struggled to find providers to replace Planned Parenthood clinics, which provided 40 percent of Women&rsquo;s Health Program services in 2012.</p>
         <p>&ldquo;There can still be some pockets where we don&rsquo;t have a provider and we did before,&rdquo; Texas Health and Human Services Commissioner Kyle Janek said. "Planned Parenthood may have been the only game in that area.&rdquo;</p>
         <p>During the first six months of 2013, there were 38 percent fewer reimbursement claims for birth control than there were during the first six months of 2012, according to a Texas Tribune analysis of data provided by the Texas Health and Human Services Commission. The number of wellness exams, meanwhile, decreased by 23 percent. Program enrollment figures have also declined, down from 127,000 in January 2012 to 110,900 in May, the most recent month available.</p>
+        <p>Cecile Richards, president of the Planned Parenthood Federation of America and daughter of the late Texas Gov. Ann Richards, called the figures &ldquo;troubling.&rdquo; </p>
+        <p>&ldquo;Despite all the promises from state officials that women&rsquo;s health care needs would be met,&rdquo; she said, &ldquo;it&rsquo;s clear they aren&rsquo;t.&rdquo;</p>
+        <p>But Janek argued that the claims numbers are misleading. He said the birth control distributed by the program has not declined as much as initial claims data suggest, because the majority of providers who replaced Planned Parenthood clinics are physician groups that direct patients to pharmacies for prescriptions, rather than distributing it onsite like family planning clinics. The program&rsquo;s pharmacy data for 2013 is not complete, and the state could not provide additional information on how many birth control prescriptions were filled.</p>
       </div>
-      <!-- Media: Small block quote LEFT; Big block image RIGHT -->
+            <!-- Media: Small block LEFT; Big block RIGHT -->
       <div class="media">
-        <!-- Block Quote -->
+        <!-- Graphic Tables-->
         <div class="small-block">
           <div id="interactive-hook" class="grid select-box-row">
             <dl class="altered-select-item">
@@ -200,6 +220,18 @@
             <select id="county-select" class="option-select">
               <option value="statewide">Statewide</option>
             </select>
+          </div>
+          <div>
+            <div class="table-header">Number of Women's Health Program Providers</div>
+            <table class="tt-table striped borders condensed">
+              <thead>
+                <tr>
+                  <th class="chart-legend-2012">2012</th>
+                  <th class="chart-legend-2013">2013</th>
+                </tr>
+              </thead>
+            <tbody id="table-data-providers"></tbody>
+            </table>
           </div>
           <div>
             <table class="tt-table striped borders condensed">
@@ -214,97 +246,46 @@
             </table>
           </div>
         </div>
-        <!-- Image -->
+        <!-- Chart -->
         <div class="big-block">
           <div>
-            <div class="table-header">Number of Women's Health Program Providers</div>
-            <table class="tt-table striped borders condensed">
-              <thead>
-                <tr>
-                  <th class="chart-legend-2012">2012</th>
-                  <th class="chart-legend-2013">2013</th>
-                </tr>
-              </thead>
-            <tbody id="table-data-providers"></tbody>
-            </table>
-          </div>
-          <div>
             <div class="table-header">Number of Claims, January to June</div>
-          </div>
-          <div id="canvas-hook"></div>
-          <div>
+            <div id="canvas-hook" class="chart"></div>
             <p><em>Graphic by <a href="http://www.texastribune.org/about/staff/ryan-murphy/">Ryan Murphy</a></em></p>
           </div>
         </div>
       </div>
-      <div class="prose">
-      <p>Cecile Richards, president of the Planned Parenthood Federation of America and daughter of the late Texas Gov. Ann Richards, called the figures &ldquo;troubling.&rdquo; </p>
-      <p>&ldquo;Despite all the promises from state officials that women&rsquo;s health care needs would be met,&rdquo; she said, &ldquo;it&rsquo;s clear they aren&rsquo;t.&rdquo;</p>
-      <p>But Janek argued that the claims numbers are misleading. He said the birth control distributed by the program has not declined as much as initial claims data suggest, because the majority of providers who replaced Planned Parenthood clinics are physician groups that direct patients to pharmacies for prescriptions, rather than distributing it onsite like family planning clinics. The program&rsquo;s pharmacy data for 2013 is not complete, and the state could not provide additional information on how many birth control prescriptions were filled.</p>
-      <p>&ldquo;We think when you add all those up for birth control, both those delivered at the pharmacy and those given by the provider&rsquo;s office, we&rsquo;ve got an increase, not a decrease,&rdquo; Janek said. </p>
-      <p>Women&rsquo;s Health Program claims for long-acting, reversible birth control methods like intra-uterine devices and hormonal implants, which must be inserted by the provider onsite, declined by 17 percent in the same time period. Janek said that was the result of the state not paying providers enough to cover the procedure, something health officials have rectified by raising reimbursement rates for copper IUDs by $200 and hormonal implants by $75.</p>
-      <p> &ldquo;We&rsquo;ve changed that, so I expect the second six months and thereafter will tell a different story,&rdquo; he said. </p>
-      <p>Janek said that while he is happy with the state-run program&rsquo;s progress, he would not be satisfied &ldquo;until we do better.&rdquo; The state is conducting targeted outreach to encourage more women to enroll in the program; health officials say when they sent mailers in October and November to women whose families were registered for other state programs, enrollment promptly increased by more than 9,000 women.</p>
-      <p>While Republican state leaders work to improve capacity in the state-run program, many family planning clinics have struggled. Seventy-six family planning clinics closed after the 2011 legislative session, when Republican lawmakers with Planned Parenthood in their crosshairs cut two-thirds of the state&rsquo;s family planning budget, set up a tiered system to shift remaining dollars away from reproductive health clinics and ousted Planned Parenthood and other clinics from the Women&rsquo;s Health Program.</p>
-      <p>Haven Health Clinic in Amarillo, for example, the only family planning clinic that serves the 26 counties in the Texas Panhandle, saw a 20 percent decrease in Women&rsquo;s Health Program patients between 2012 and 2013. </p>
-      <p>&ldquo;We&rsquo;re struggling now, but we&rsquo;d be out of business if the program closed completely, which would be devastating for this part of the state,&rdquo; said Carolina Cogdill, Haven&rsquo;s chief executive officer.</p>
-      <p>Republican lawmakers attempted to mitigate the damage they had done to Texas&rsquo; family planning infrastructure in the 2013 legislative session by passing the largest financial package for women&rsquo;s health in state history. Texas&rsquo; 2014-15 budget includes $71 million to operate the Texas Women&rsquo;s Health Program, $100 million to expand a primary care program to serve an additional 170,000 women, and $43 million to replace family planning grants the federal government used to award to the state health agency &mdash;&nbsp;but has now given to another organization. </p>
-      <p>But women&rsquo;s health advocates remain concerned that the damage wrought in 2011 cannot easily be undone.</p>
-      <p>&ldquo;The Texas Women&rsquo;s Health Program has great potential, but it has not taken off in private practice yet,&rdquo; said Dr. Janet Realini, chair of the Texas Women&rsquo;s Healthcare Coalition, which represents 39 medical trade associations and advocacy groups. &ldquo;The providers who were doing most of that work have been either excluded or damaged by the cuts.&rdquo;</p>
-      <p>Although some providers say a decline in Women&rsquo;s Health Program patients has put them in financial distress, others have easily absorbed new patients who previously received services from Planned Parenthood. </p>
-      <p>Parkland Health and Hospital System in the Dallas area</span><span> received 212 phone calls in January from former Planned Parenthood patients looking for a new Women&rsquo;s Health Program provider, said Paula Turicchi, Parkland&rsquo;s senior vice president for women and infants specialty health. So far in 2013, Parkland clinics have served 9,180 patients in the program, compared with 8,655 in 2012. </p>
-      <p>&ldquo;We definitely saw a greater impact around those locations where Planned Parenthood had been a provider,&rdquo; Turicchi said.</p>
-      <p>After the 2011 budget cuts, Parkland&rsquo;s annual family planning financing dropped to $2.1 million from $7.4 million, and it instituted a $25 co-payment for low-income family planning patients who used to be fully subsidized. Turicchi said 42 of 420 patients who canceled appointments in February 2012 because they couldn&rsquo;t afford the co-payment later returned pregnant.</p>
-      <p>Parkland recently received $4.8 million through the state&rsquo;s newly expanded primary health care program to increase services for impoverished women in 2014. </p>
-      <p>&ldquo;That&rsquo;s going to go a long way in providing even more health care services to patients,&rdquo; Turicchi said, adding that the program covers far more than just family planning.</p>
-      <p><em>This story was produced with the support of the Dennis A. Hunt Fund for Health Journalism, a program of the USC Annenberg School of Journalism's California Endowment for Health Journalism Fellowships, and&nbsp;<em>in partnership with</em><em>&nbsp;</em><em><a href="http://www.kaiserhealthnews.org/">Kaiser Health News</a>, an editorially independent program of the Henry J. Kaiser Family Foundation, a nonprofit, nonpartisan health policy research and communication organization not affiliated with Kaiser Permanente. &nbsp;&nbsp;</em></em></p>
-    </div>
+      <div class="prose">        
+        <p>&ldquo;We think when you add all those up for birth control, both those delivered at the pharmacy and those given by the provider&rsquo;s office, we&rsquo;ve got an increase, not a decrease,&rdquo; Janek said. </p>
+        <p>Women&rsquo;s Health Program claims for long-acting, reversible birth control methods like intra-uterine devices and hormonal implants, which must be inserted by the provider onsite, declined by 17 percent in the same time period. Janek said that was the result of the state not paying providers enough to cover the procedure, something health officials have rectified by raising reimbursement rates for copper IUDs by $200 and hormonal implants by $75.</p>
+        <p> &ldquo;We&rsquo;ve changed that, so I expect the second six months and thereafter will tell a different story,&rdquo; he said. </p>
+        <p>Janek said that while he is happy with the state-run program&rsquo;s progress, he would not be satisfied &ldquo;until we do better.&rdquo; The state is conducting targeted outreach to encourage more women to enroll in the program; health officials say when they sent mailers in October and November to women whose families were registered for other state programs, enrollment promptly increased by more than 9,000 women.</p>
+        <p>While Republican state leaders work to improve capacity in the state-run program, many family planning clinics have struggled. Seventy-six family planning clinics closed after the 2011 legislative session, when Republican lawmakers with Planned Parenthood in their crosshairs cut two-thirds of the state&rsquo;s family planning budget, set up a tiered system to shift remaining dollars away from reproductive health clinics and ousted Planned Parenthood and other clinics from the Women&rsquo;s Health Program.</p>
+              <!-- Full-size block quote -->
+        <div class="block-text">
+          <h2>&ldquo;We&rsquo;re struggling now, but we&rsquo;d be out of business if the program closed completely, which would be devastating for this part of the state.&rdquo;</h2>
+          <p>&mdash; Carolina Cogdill, chief executive officer of Haven Health Clinic</p>
+        </div>
+        <p>Haven Health Clinic in Amarillo, for example, the only family planning clinic that serves the 26 counties in the Texas Panhandle, saw a 20 percent decrease in Women&rsquo;s Health Program patients between 2012 and 2013. </p>
+        <p>&ldquo;We&rsquo;re struggling now, but we&rsquo;d be out of business if the program closed completely, which would be devastating for this part of the state,&rdquo; said Carolina Cogdill, Haven&rsquo;s chief executive officer.</p>
+        <p>Republican lawmakers attempted to mitigate the damage they had done to Texas&rsquo; family planning infrastructure in the 2013 legislative session by passing the largest financial package for women&rsquo;s health in state history. Texas&rsquo; 2014-15 budget includes $71 million to operate the Texas Women&rsquo;s Health Program, $100 million to expand a primary care program to serve an additional 170,000 women, and $43 million to replace family planning grants the federal government used to award to the state health agency &mdash;&nbsp;but has now given to another organization. </p>
+        <p>But women&rsquo;s health advocates remain concerned that the damage wrought in 2011 cannot easily be undone.</p>
+        <p>&ldquo;The Texas Women&rsquo;s Health Program has great potential, but it has not taken off in private practice yet,&rdquo; said Dr. Janet Realini, chair of the Texas Women&rsquo;s Healthcare Coalition, which represents 39 medical trade associations and advocacy groups. &ldquo;The providers who were doing most of that work have been either excluded or damaged by the cuts.&rdquo;</p>
+        <p>Although some providers say a decline in Women&rsquo;s Health Program patients has put them in financial distress, others have easily absorbed new patients who previously received services from Planned Parenthood. </p>
+      </div>
               <!-- Media: BIG IMAGE -->
       <div class="media">
         <img src="http://placekitten.com/1088/500" alt="A sign at a construction area in Austin warns workers to wear protective gear. Photo by Callie Richmond.">
         <p class="caption">A sign at a construction area in Austin warns workers to wear protective gear. Photo by Callie Richmond.</p>
       </div>
       <div class="prose">
-
+        <p>Parkland Health and Hospital System in the Dallas area</span><span> received 212 phone calls in January from former Planned Parenthood patients looking for a new Women&rsquo;s Health Program provider, said Paula Turicchi, Parkland&rsquo;s senior vice president for women and infants specialty health. So far in 2013, Parkland clinics have served 9,180 patients in the program, compared with 8,655 in 2012. </p>
+        <p>&ldquo;We definitely saw a greater impact around those locations where Planned Parenthood had been a provider,&rdquo; Turicchi said.</p>
+        <p>After the 2011 budget cuts, Parkland&rsquo;s annual family planning financing dropped to $2.1 million from $7.4 million, and it instituted a $25 co-payment for low-income family planning patients who used to be fully subsidized. Turicchi said 42 of 420 patients who canceled appointments in February 2012 because they couldn&rsquo;t afford the co-payment later returned pregnant.</p>
+        <p>Parkland recently received $4.8 million through the state&rsquo;s newly expanded primary health care program to increase services for impoverished women in 2014. </p>
+        <p>&ldquo;That&rsquo;s going to go a long way in providing even more health care services to patients,&rdquo; Turicchi said, adding that the program covers far more than just family planning.</p>
+        <p><em>This story was produced with the support of the Dennis A. Hunt Fund for Health Journalism, a program of the USC Annenberg School of Journalism's California Endowment for Health Journalism Fellowships, and&nbsp;<em>in partnership with</em><em>&nbsp;</em><em><a href="http://www.kaiserhealthnews.org/">Kaiser Health News</a>, an editorially independent program of the Henry J. Kaiser Family Foundation, a nonprofit, nonpartisan health policy research and communication organization not affiliated with Kaiser Permanente. &nbsp;&nbsp;</em></em></p>
       </div>
-      <!-- Media: Small block quote LEFT; Big block image RIGHT -->
-      <div class="media">
-        <!-- Block Quote -->
-        <div class="small-block block-text">
-          <h2>&ldquo;We still don&rsquo;t have enough family planning dollars here in the state of Texas.&rdquo;</h2>
-          <p>&mdash; Katy Caldwell, chief executive of Legacy Community Health Services</p>
-        </div>
-        <!-- Image -->
-        <div class="big-block">
-          <img src="http://placekitten.com/717/488" alt="A worker helps with construction of a building in Austin. Photo by Callie Richmond.">
-          <p class="caption">Workers help with construction of a building in Austin. Photo by Todd Wiseman.</p>
-        </div>
-      </div>
-      <div class="prose">
-              <!-- Media: Big image LEFT; Small block quote RIGHT; -->
-      <div class="media">
-        <!-- Image -->
-        <div class="big-block">
-          <img src="http://placekitten.com/717/488" alt="Photo by Justin Dehn.">
-          <p class="caption">Photo by Justin Dehn.</p>
-        </div>
-        <!-- Block quote -->
-        <div class="small-block block-text">
-          <div>
-            <h2 class="left">&ldquo;It&rsquo;s heartbreaking, because women who need to end a pregnancy after 16 weeks are often in some of the most extreme circumstances.&rdquo;</h2>
-            <p>&mdash; Melaney Linton, president and chief executive officer of Planned Parenthood Gulf Coast</p>
-          </div>
-        </div>
-      </div>
-      <div class="prose">
-
-      <!-- Full-size block quote -->
-        <div class="block-text">
-          <h2>&ldquo;There&rsquo;s an advantage to guiding that money to the family planning, that preventive care piece, because that&rsquo;s where the cost savings occur.&rdquo;</h2>
-          <p>&mdash; Dr. Janet Realini, Texas Women&rsquo;s Health Coalition chairwoman</p>
-        </div>
-        
-      </div> 
       <div class="about">
           <h3>ABOUT</h3>
           <p class="about-desc">As a 2013 National Health Journalism Fellow, Becca Aaronson spent a year investigating and reporting on the impact of state policies on Texas womens' access to public health programs across Texas in collaboration with her Tribune colleagues, Alexa Ura and Ryan Murphy. This is a reproduction of some of those reports. Read the entire Politics of Prevention series <a href="http://www.texastribune.org/series/politics-of-prevention/">here</a>.</p>
