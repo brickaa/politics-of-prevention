@@ -59,6 +59,9 @@
 					@include span-columns(6 of 12);
 				}
 			}
+			.left {
+				@include omega();
+			}
 		}
 		.about {
 			@include span-columns(12);
