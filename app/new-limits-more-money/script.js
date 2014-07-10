@@ -83,24 +83,24 @@ var TotalView = Backbone.View.extend({
   }
 });
 
-  var ContractsView = Backbone.View.extend({
-    el: '#table-data-contracts',
+  // var ContractsView = Backbone.View.extend({
+  //   el: '#table-data-contracts',
    
-    template: _.template($('#table-row-contracts').html()),
+  //   template: _.template($('#table-row-contracts').html()),
    
-    initialize: function() {
-      this.listenTo(activeRegion, 'add', this.render);
-    },
+  //   initialize: function() {
+  //     this.listenTo(activeRegion, 'add', this.render);
+  //   },
    
-    render: function(model) {
-      var html = "",
-          self = this;
-      _.each(model.findContracts(), function(c) {
-        html += self.template(c.toJSON());
-      });
-      this.$el.html(html);
-      return this;
-    }
+  //   render: function(model) {
+  //     var html = "",
+  //         self = this;
+  //     _.each(model.findContracts(), function(c) {
+  //       html += self.template(c.toJSON());
+  //     });
+  //     this.$el.html(html);
+  //     return this;
+  //   }
 
   });
 
@@ -109,7 +109,7 @@ var activeRegion = new Backbone.Collection();
  
 var contractSelectView = new ContractSelectView({collection: regions});
  
-var table = new ContractsView();
+// var table = new ContractsView();
 new TotalView(); 
 
 regions.reset(regiondata);
