@@ -102,7 +102,7 @@ var TotalView = Backbone.View.extend({
   //     return this;
   //   }
 
-  });
+  // });
 
 var contracts = new Contracts();
 var activeRegion = new Backbone.Collection();

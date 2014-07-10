@@ -148,9 +148,6 @@
 }
 
 @media screen and (max-width: 767px) {
-    .table-striped {
-        font-size: 12px;
-    }
 
     .map {
       height: 290px;
