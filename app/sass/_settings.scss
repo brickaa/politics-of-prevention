@@ -4,15 +4,15 @@ $full_width: new-breakpoint(min-width 1088px 12);
 $mobile: new-breakpoint(max-width 480px);
 
 // fonts
-$boldHeaderFont: $helvetica;
-$textFont: $georgia;
-$chartFont: $helvetica;
+$base-sans-serif: $helvetica;
+$base-serif: $georgia;
 
 // colors
 $white: rgb(255, 255, 255);
 $offblack: rgb(34, 34, 34);
 $offwhite: rgb(238, 238, 238);
 $navBlack: rgb(17, 17, 17);
+$masthead-black: rgb(17, 17, 17);
 
 $lt_gray: rgb(102, 102, 102);
 $dk_gray: rgb(51, 51, 51);

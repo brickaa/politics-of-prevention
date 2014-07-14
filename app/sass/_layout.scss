@@ -12,6 +12,21 @@
 		}
 	}
 }
+.container {
+	@include outer-container();
+}
+.content-block {
+  margin-left: 1.25em; // 20px left
+  margin-right: 1.25em; // 20px right
+}
+.title-container {
+	@include span-columns(10 of 12);
+	@include shift(1);
+	@include media($desktop) {
+		@include span-columns(8 of 12);
+		@include shift(2);
+	}
+}
 .story-wrapper {
 	@include outer-container();
 	.nav-bar {

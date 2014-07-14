@@ -6,6 +6,77 @@ body {
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 }
+
+.masthead {
+  background-color: $masthead-black;
+  width: 100%;
+
+  .branding {
+    padding: .75em 0 .375em;
+    text-align: center;
+    width: 100%;
+
+    .trib-logo {
+      height: 1.625em;
+    }
+  }
+}
+
+.banner {
+  background-color: lighten($masthead-black, 15%);
+  display: table;
+  height: 225px;
+  // margin: 0 0 1.5em;
+  position: relative;
+  width: 100%;
+
+  .grand-header {
+    display: table-cell;
+    padding: 0 1.25em;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+    a:hover {
+    	text-decoration: underline;
+    }
+    h1 {
+      color: rgb(255, 255, 255);
+      font-family: $base-serif;
+      font-size: 2.5em;
+      font-weight: 800;
+      line-height: 1.15;
+      text-shadow: rgb(0, 0, 0) 3px 3px 0;
+      @include media($desktop) {
+        font-size: 3.5em;
+      }
+    }
+		h2 {
+			color: $white;
+			font: 500 1.5em helvetica;
+			letter-spacing: 1px;
+			line-height: 1.3em;
+			text-align: center;
+			text-shadow: rgb(0, 0, 0) 2px 2px 0px;
+			margin: auto;
+		}
+  }
+
+  .grand-header-image {
+    background-image: url('');
+    background-position: center center;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
 .container {
 	background: $white;
 	max-width: 100%;
@@ -17,109 +88,109 @@ body {
 	font-weight: normal;
 }
 //Top HEADER
-.header-wrapper {
-	position: relative;
-	max-height: 640px;
-}
-.header-container {
-	position: absolute;
-	max-width: 100%;
-	display: block;
-	vertical-align: middle;
-	text-align: center;
-	max-height: 640px;
-}
+// .header-wrapper {
+// 	position: relative;
+// 	max-height: 640px;
+// }
+// .header-container {
+// 	position: absolute;
+// 	max-width: 100%;
+// 	display: block;
+// 	vertical-align: middle;
+// 	text-align: center;
+// 	max-height: 640px;
+// }
 //Top of Page Navigation
-.page-nav {
-	background-color: $navBlack;
-	height: 2.75em;
-	img {	
-		margin: 0 0.5em 0 0.5em;
-		max-height: 1.5em;
-	}
-	.investigates-logo {
-		display: none;
-		@include media($desktop) {
-			display: block;
-			margin-top: 0.75em;				
-			float: right;
-		}
-	}
-	.trib-logo {
-		margin-top: 0.25em;
-		float: none;
-		img {
-			margin-top: 0.5em;
-			max-height: 1.25em;
-		}
-		@include media($desktop) {
-			float: left;
-		}
-	}
-}
-.page-nav-backdrop {
-	background-color: $navBlack;
-	height: 2.75em;
-}
+// .page-nav {
+// 	background-color: $navBlack;
+// 	height: 2.75em;
+// 	img {	
+// 		margin: 0 0.5em 0 0.5em;
+// 		max-height: 1.5em;
+// 	}
+// 	.investigates-logo {
+// 		display: none;
+// 		@include media($desktop) {
+// 			display: block;
+// 			margin-top: 0.75em;				
+// 			float: right;
+// 		}
+// 	}
+// 	.trib-logo {
+// 		margin-top: 0.25em;
+// 		float: none;
+// 		img {
+// 			margin-top: 0.5em;
+// 			max-height: 1.25em;
+// 		}
+// 		@include media($desktop) {
+// 			float: left;
+// 		}
+// 	}
+// }
+// .page-nav-backdrop {
+// 	background-color: $navBlack;
+// 	height: 2.75em;
+// }
 //Project Title, Subtitle
-.title-container {
-	.title {
-		width: 100%;
-		h1 {
-			color: $white;
-			font-size: 3em;
-			line-height: 1.2em;
-			text-shadow: rgb(0, 0, 0) 3px 3px 0px;
-			font-family: Georgia;
-			margin: auto;
-			padding: 0.5em 0;
-			@include media($desktop) {
-				font-size: 5em;	
-			}
-		}
-		h2 {
-			color: $white;
-			font: 500 1.5em helvetica;
-			letter-spacing: 1px;
-			line-height: 1.3em;
-			text-align: center;
-			text-shadow: rgb(0, 0, 0) 2px 2px 0px;
-			margin: auto;
-		}
-	}
-}
+// .title-container {
+// 	.title {
+// 		width: 100%;
+// 		h1 {
+// 			color: $white;
+// 			font-size: 3em;
+// 			line-height: 1.2em;
+// 			text-shadow: rgb(0, 0, 0) 3px 3px 0px;
+// 			font-family: Georgia;
+// 			margin: auto;
+// 			padding: 0.5em 0;
+// 			@include media($desktop) {
+// 				font-size: 5em;	
+// 			}
+// 		}
+// 		h2 {
+// 			color: $white;
+// 			font: 500 1.5em helvetica;
+// 			letter-spacing: 1px;
+// 			line-height: 1.3em;
+// 			text-align: center;
+// 			text-shadow: rgb(0, 0, 0) 2px 2px 0px;
+// 			margin: auto;
+// 		}
+// 	}
+// }
 //Lead Background Art settings, images
-.lead-image {
-	background-repeat: no-repeat;
-	height: 440px;
-	width: 100%;
-	background-position: center center;
-	background-color: $navBlack;						
-}
-.lead-one {
-	background-image: url(../images/leads/tt-workers-LeadArt-Todd-5.jpg);
-	@include media($desktop) {
-		background-image: url(../images/leads/tt-workers-LeadArt-Todd-5.jpg);
-	}
-}
-.lead-two {
-	background-image: url(../images/leads/Santiago.jpg);
-	@include media($desktop) {
-		background-image: url(../images/leads/Santiago-Single-Lead.jpg);
-	}
-}
-.lead-three {
-	background-image: url(../images/leads/Crystal-Mobile-Crash.jpg);
-	@include media($desktop) {
-		background-image: url(../images/leads/Crystal-Single-Lead.jpg);
-	}
-}
-.lead-four {
-	background-image: url(../images/leads/Lead-Day-4-mobile.jpg);
-	@include media($desktop) {
-		background-image: url(../images/leads/Lead-Day-4.jpg);
-	}
-}
+// .lead-image {
+// 	background-repeat: no-repeat;
+// 	height: 440px;
+// 	width: 100%;
+// 	background-position: center center;
+// 	background-color: $navBlack;						
+// }
+// .lead-one {
+// 	background-image: url(../images/leads/tt-workers-LeadArt-Todd-5.jpg);
+// 	@include media($desktop) {
+// 		background-image: url(../images/leads/tt-workers-LeadArt-Todd-5.jpg);
+// 	}
+// }
+// .lead-two {
+// 	background-image: url(../images/leads/Santiago.jpg);
+// 	@include media($desktop) {
+// 		background-image: url(../images/leads/Santiago-Single-Lead.jpg);
+// 	}
+// }
+// .lead-three {
+// 	background-image: url(../images/leads/Crystal-Mobile-Crash.jpg);
+// 	@include media($desktop) {
+// 		background-image: url(../images/leads/Crystal-Single-Lead.jpg);
+// 	}
+// }
+// .lead-four {
+// 	background-image: url(../images/leads/Lead-Day-4-mobile.jpg);
+// 	@include media($desktop) {
+// 		background-image: url(../images/leads/Lead-Day-4.jpg);
+// 	}
+// }
 //Story navigation bars
 //Static nav-bar styles
 .nav-bar {
