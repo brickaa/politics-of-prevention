@@ -10,19 +10,17 @@ body {
 .masthead {
   background-color: $masthead-black;
   width: 100%;
-
   .branding {
     padding: .75em 0 .375em;
     text-align: center;
     width: 100%;
-
     .trib-logo {
       height: 1.625em;
     }
   }
 }
 
-.banner {
+.banner-wrapper {
   background-color: lighten($masthead-black, 15%);
   display: table;
   height: 225px;
@@ -32,19 +30,19 @@ body {
 
   .grand-header {
     display: table-cell;
+    float: none;
+    width: 100%;
     padding: 0 1.25em;
     position: relative;
     text-align: center;
     vertical-align: middle;
     a {
-      color: rgb(255, 255, 255);
-      text-decoration: none;
-    }
-    a:hover {
-    	text-decoration: underline;
-    }
+	    color: rgb(255, 255, 255);
+	    text-decoration: none;
+	  }
     h1 {
       color: rgb(255, 255, 255);
+      text-align: center;
       font-family: $base-serif;
       font-size: 2.5em;
       font-weight: 800;
@@ -53,6 +51,9 @@ body {
       @include media($desktop) {
         font-size: 3.5em;
       }
+		  a:hover {
+		  	text-decoration: underline;
+		  }
     }
 		h2 {
 			color: $white;
@@ -63,10 +64,13 @@ body {
 			text-shadow: rgb(0, 0, 0) 2px 2px 0px;
 			margin: auto;
 		}
+		@include media($desktop){
+			float: left;
+		}
   }
 
   .grand-header-image {
-    background-image: url('');
+    background-image: url('http://placekitten.com/1100/400');
     background-position: center center;
     background-size: cover;
     bottom: 0;
@@ -87,115 +91,8 @@ body {
 	overflow-x: hidden;
 	font-weight: normal;
 }
-//Top HEADER
-// .header-wrapper {
-// 	position: relative;
-// 	max-height: 640px;
-// }
-// .header-container {
-// 	position: absolute;
-// 	max-width: 100%;
-// 	display: block;
-// 	vertical-align: middle;
-// 	text-align: center;
-// 	max-height: 640px;
-// }
-//Top of Page Navigation
-// .page-nav {
-// 	background-color: $navBlack;
-// 	height: 2.75em;
-// 	img {	
-// 		margin: 0 0.5em 0 0.5em;
-// 		max-height: 1.5em;
-// 	}
-// 	.investigates-logo {
-// 		display: none;
-// 		@include media($desktop) {
-// 			display: block;
-// 			margin-top: 0.75em;				
-// 			float: right;
-// 		}
-// 	}
-// 	.trib-logo {
-// 		margin-top: 0.25em;
-// 		float: none;
-// 		img {
-// 			margin-top: 0.5em;
-// 			max-height: 1.25em;
-// 		}
-// 		@include media($desktop) {
-// 			float: left;
-// 		}
-// 	}
-// }
-// .page-nav-backdrop {
-// 	background-color: $navBlack;
-// 	height: 2.75em;
-// }
-//Project Title, Subtitle
-// .title-container {
-// 	.title {
-// 		width: 100%;
-// 		h1 {
-// 			color: $white;
-// 			font-size: 3em;
-// 			line-height: 1.2em;
-// 			text-shadow: rgb(0, 0, 0) 3px 3px 0px;
-// 			font-family: Georgia;
-// 			margin: auto;
-// 			padding: 0.5em 0;
-// 			@include media($desktop) {
-// 				font-size: 5em;	
-// 			}
-// 		}
-// 		h2 {
-// 			color: $white;
-// 			font: 500 1.5em helvetica;
-// 			letter-spacing: 1px;
-// 			line-height: 1.3em;
-// 			text-align: center;
-// 			text-shadow: rgb(0, 0, 0) 2px 2px 0px;
-// 			margin: auto;
-// 		}
-// 	}
-// }
-//Lead Background Art settings, images
-// .lead-image {
-// 	background-repeat: no-repeat;
-// 	height: 440px;
-// 	width: 100%;
-// 	background-position: center center;
-// 	background-color: $navBlack;						
-// }
-// .lead-one {
-// 	background-image: url(../images/leads/tt-workers-LeadArt-Todd-5.jpg);
-// 	@include media($desktop) {
-// 		background-image: url(../images/leads/tt-workers-LeadArt-Todd-5.jpg);
-// 	}
-// }
-// .lead-two {
-// 	background-image: url(../images/leads/Santiago.jpg);
-// 	@include media($desktop) {
-// 		background-image: url(../images/leads/Santiago-Single-Lead.jpg);
-// 	}
-// }
-// .lead-three {
-// 	background-image: url(../images/leads/Crystal-Mobile-Crash.jpg);
-// 	@include media($desktop) {
-// 		background-image: url(../images/leads/Crystal-Single-Lead.jpg);
-// 	}
-// }
-// .lead-four {
-// 	background-image: url(../images/leads/Lead-Day-4-mobile.jpg);
-// 	@include media($desktop) {
-// 		background-image: url(../images/leads/Lead-Day-4.jpg);
-// 	}
-// }
-//Story navigation bars
 //Static nav-bar styles
 .nav-bar {
-	color: $white;
-	background: $white;
 	font: 500 0.8em Helvetica;
 	letter-spacing: 1px;
 	line-height: 1.2em;
@@ -207,18 +104,12 @@ body {
 	ul {
 		display: block;
 		list-style-type: none;
-		margin: 0;
+		margin-top: 2em;
 		width: 100%;
 		max-width: 1088px;
 		li {
-			background: $dk_teal;
-			margin-top: 0.25em;
-			&:active {
-				background: $dk_teal;
-			}
-			&:hover {
-				background: $dk_teal;				
-			}
+			color: $white;
+			border: 1px solid;
 			img {
 				display: none;
 				@include media($desktop) {
@@ -228,42 +119,23 @@ body {
 					margin-top:0;
 				}
 			}
-			@include media($desktop) {
-				background: $white;
-				margin-top: 0;
+			&:active {
+				background: $dk_teal;
 			}
+			&:hover {
+				background: $dk_teal;			
+			}
+
 		}
 		.nav-link {
-			color: $dk_gray;
+			// color: $dk_gray;
 			font-weight: bold;
 			width: 100%;
 			margin: 0.75em 0;
 		}
-		@include media($desktop) {
-			background: $white;
+		a {
+			text-decoration: none;
 		}	
-	}
-	.inactive {
-		li {
-			height: 5em;
-			@include media($desktop) {
-				height: 5em;
-			}
-		}
-		p {	
-			display: block;
-			color: $white;
-			font-weight: bold;
-		}
-		@include media($desktop) {
-			p {
-				display: none;
-			}
-		}
-	}
-	a {
-		text-decoration: none;
-		text-shadow: none;
 	}
 }
 //Sticky nav-bar styles
@@ -297,43 +169,12 @@ body {
 					background: $dk_teal;
 				}
 			}
-		}
-		.inactive {
-			p {
-				display: none;
-			}
-			&:active {
-				.nav-link {
-					display: none;
-				}
-				p {
-					display: block;
-					color: $white;
-					font-weight: bold;
-					margin-top: 0;
-					padding-top: 0.8em;
-				}
-			}
-			&:hover {
-				.nav-link {
-					display: none;
-				}
-				p {
-					display: block;
-					color: $white;
-					font-weight: bold;
-					margin-top: 0;
-					padding-top: 0.8em;
-				}
-			}
 		}	
 	}
 }
 
-
-
 .story-container {
-	max-width: 94%;
+	max-width: 100%;
 	display: block;
 	border-top: 4px solid $yellow;
 	margin-top: 1.5em;
@@ -535,6 +376,97 @@ body {
 	}
 .hide {
 	display: none;
+}
+table {
+  display: block;
+  font-family: $base-sans-serif;
+  font-size: .875em;
+  margin-bottom: 1em;
+  width: 100%;
+
+  @include media($desktop) {
+    display: table;
+    font-size: 1em;
+  }
+}
+
+thead {
+  display: none;
+  @include media($desktop) {
+    display: table-header-group;
+  }
+}
+
+tbody {
+  display: block;
+
+  @include media($desktop) {
+    display: table-row-group;
+  }
+}
+
+th {
+  display: block;
+
+  @include media($desktop) {
+    border-bottom: 1px solid rgb(187, 187, 187);
+    display: table-cell;
+    font-size: 1em;
+    font-weight: 800;
+    padding: 0 12px 8px;
+    text-align: right;
+    vertical-align: middle;
+
+    &:first-child {
+      text-align: left;
+    }
+  }
+}
+
+td {
+  display: block;
+
+  &:first-child {
+    font-weight: 800;
+  }
+
+  &[data-title] {
+    &:first-child:before {
+      content: none;
+    }
+
+    &:before {
+      content: attr(data-title) ': ';
+      font-weight: 800;
+
+      @include media($desktop) {
+        content: none;
+      }
+    }
+  }
+
+  @include media($desktop) {
+    display: table-cell;
+    font-size: .875em;
+    padding: 8px 12px;
+    text-align: right;
+
+    &:first-child {
+      text-align: left;
+    }
+  }
+}
+
+tr {
+  display: block;
+
+  &:nth-child(odd) td {
+    background-color: rgb(240, 240, 240);
+  }
+
+  @include media($desktop) {
+    display: table-row;
+  }
 }
 
 .footer {

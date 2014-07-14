@@ -28,6 +28,7 @@ var layer = L.mapbox.tileLayer('texastribune.map-f9zh0xcn', {
 
 var map = L.mapbox.map('map');
 map.addLayer(layer).setView([31.33, -99.56], mapZoom);
+map.scrollWheelZoom.disable();
 
 var Facility = Backbone.Model.extend({
   defaults: {

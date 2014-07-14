@@ -54,71 +54,57 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 <div class="container">
-
-  <!--Project Header-->
-  <div class="header-wrapper">
-    <div id="header-container" class="header-container">
-      <div class="page-nav">
-        <div class="trib-logo">
-          <a href="http://www.texastribune.org/"><img src="//s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png" alt="Texas Tribune logo, link to Homepage"></a>
-        </div>
-        <div class="investigates-logo">
-          <a href="http://www.texastribune.org/tribinvestigates/"><img src="//s3.amazonaws.com/apps.texastribune.org/branding/Trib-Investigates-logo1000x142.png" alt="Tribinvestigates Logo, link to Tribinvestigates landing page"></a>
-        </div>
-      </div>
-      <div class="title-container">
-        <div class="title">
-          <h1>The Politics of Prevention</h1>
-          <h2>A year-long investigation on the effects of state policies on Texas womens' access to health care.</h2>
-        </div>
-      </div>
-      <div class="clear"></div>
+  <header class="masthead">
+    <div class="branding">
+      <a href="http://www.texastribune.org/">
+        <img class="trib-logo" alt="The Texas Tribune" src="//s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png">
+      </a>
+    </div>
+  </header>
+  <div class="banner-wrapper">
+    <div class="banner">
+      <div class="grand-header-image"></div>
+      <header class="grand-header content-block">
+        <h1><a href="/">The Politics of Prevention</a></h1>
+        <h2>An in-depth look at the effects of state policies on Texas women's health care.</h2>
+            <!-- Static navigation bar -->
+          <div id="nav-bar" class="nav-bar">
+            <ul>
+              <li>
+                <a href="/new-limits-more-money">
+                  <div class="nav-link">
+                    New Limits, More Money
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/little-evidence">
+                  <div class="nav-link">
+                    Little Evidence
+                  </div>
+                </a>
+              </li>
+              <li class="selected">
+                <a href="/a-political-gamble">
+                  <div class="nav-link">
+                    A Political Gamble
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="../">
+                  <div class="nav-link">
+                    What's Next
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+      </header>
     </div>
   </div>
-  <div class="page-nav-backdrop"></div>
-  <div class="lead-image lead-one"></div>
-
   <!-- Main body -->
   <div class="story-wrapper">
-    <!-- Static navigation bar -->
-    <div class="nav-bar nav-images">
-      <ul>
-        <li>
-            <!-- Add class="selected" to <li> of active page -->
-            <div class="nav-link">
-              New Limits, More Money
-            </div>
-            <img src="http://placekitten.com/250/200" alt="Disposable Workforce">
-        </li>
-        <li>
-         <a href="http://apps.texastribune.org/hurting-for-work/no-safety-net/">
-            <div class="nav-link">
-              Little Evidence
-            </div>
-            <img src="http://placekitten.com/250/200" alt="Link to No Safety Net story">
-            <!--If still pending publication add class="inactive" to <li>, comment out <a> and add... -->
-            <!-- <p><em>Coming DATE</em></p> -->            
-          </a>
-      </li>
-        <li class="selected">
-           <a href="http://apps.texastribune.org/hurting-for-work/a-twisted-system">
-            <div class="nav-link">
-              A Political Gamble
-            </div>
-            <img src="http://placekitten.com/250/200" alt="Link to A Twisted System story">
-          </a>
-        </li>
-        <li>
-          <a href="http://apps.texastribune.org/hurting-for-work/the-working-wounded">          
-            <div class="nav-link">
-              What's Next
-            </div>
-            <img src="http://placekitten.com/250/200" alt="Link to The Working Wounded page">
-          </a>
-        </li>
-      </ul>
-    </div>
-
     <!-- Sticky nav -->
     <div id="nav-bar" class="nav-bar sticky nav-hide">
       <ul>
@@ -208,31 +194,39 @@
         <p>Cecile Richards, president of the Planned Parenthood Federation of America and daughter of the late Texas Gov. Ann Richards, called the figures &ldquo;troubling.&rdquo; </p>
         <p>&ldquo;Despite all the promises from state officials that women&rsquo;s health care needs would be met,&rdquo; she said, &ldquo;it&rsquo;s clear they aren&rsquo;t.&rdquo;</p>
         <p>But Janek argued that the claims numbers are misleading. He said the birth control distributed by the program has not declined as much as initial claims data suggest, because the majority of providers who replaced Planned Parenthood clinics are physician groups that direct patients to pharmacies for prescriptions, rather than distributing it onsite like family planning clinics. The program&rsquo;s pharmacy data for 2013 is not complete, and the state could not provide additional information on how many birth control prescriptions were filled.</p>
+        <div id="interactive-hook" class="grid select-box-row">
+          <dl class="altered-select-item">
+            <dt>Select County</dt>
+          </dl>
+          <select id="county-select" class="option-select">
+            <option value="statewide">Statewide</option>
+          </select>
+        </div>
+        <div>
+          <div class="table-header">Number of Women's Health Program Providers</div>
+          <table class="tt-table striped borders condensed">
+            <thead>
+              <tr>
+                <th class="chart-legend-2012">2012</th>
+                <th class="chart-legend-2013">2013</th>
+              </tr>
+            </thead>
+          <tbody id="table-data-providers"></tbody>
+          </table>
+        </div>
       </div>
             <!-- Media: Small block LEFT; Big block RIGHT -->
       <div class="media">
+        <!-- Chart -->
+        <div class="big-block">
+          <div>
+            <div class="table-header">Number of Claims, January to June</div>
+            <div id="canvas-hook" class="chart"></div>
+            <p><em>Graphic by <a href="http://www.texastribune.org/about/staff/ryan-murphy/">Ryan Murphy</a></em></p>
+          </div>
+        </div>
         <!-- Graphic Tables-->
         <div class="small-block">
-          <div id="interactive-hook" class="grid select-box-row">
-            <dl class="altered-select-item">
-              <dt>Select County</dt>
-            </dl>
-            <select id="county-select" class="option-select">
-              <option value="statewide">Statewide</option>
-            </select>
-          </div>
-          <div>
-            <div class="table-header">Number of Women's Health Program Providers</div>
-            <table class="tt-table striped borders condensed">
-              <thead>
-                <tr>
-                  <th class="chart-legend-2012">2012</th>
-                  <th class="chart-legend-2013">2013</th>
-                </tr>
-              </thead>
-            <tbody id="table-data-providers"></tbody>
-            </table>
-          </div>
           <div>
             <table class="tt-table striped borders condensed">
               <thead>
@@ -244,14 +238,6 @@
               </thead>
             <tbody id="table-data"></tbody>
             </table>
-          </div>
-        </div>
-        <!-- Chart -->
-        <div class="big-block">
-          <div>
-            <div class="table-header">Number of Claims, January to June</div>
-            <div id="canvas-hook" class="chart"></div>
-            <p><em>Graphic by <a href="http://www.texastribune.org/about/staff/ryan-murphy/">Ryan Murphy</a></em></p>
           </div>
         </div>
       </div>

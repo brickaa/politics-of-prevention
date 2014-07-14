@@ -1,13 +1,13 @@
-$(function () {
-	var $window = $(window),
-		$stickyEl = $('.sticky'),
-		$wrapperEl = $('.nav-images'),
-		elTop = $wrapperEl.offset().top;
-	$window.scroll(function () {
-		$stickyEl.toggleClass('nav-hide', $window.scrollTop() < elTop);
-	});
+// $(function () {
+// 	var $window = $(window),
+// 		$stickyEl = $('.sticky'),
+// 		$wrapperEl = $('.nav-images'),
+// 		elTop = $wrapperEl.offset().top;
+// 	$window.scroll(function () {
+// 		$stickyEl.toggleClass('nav-hide', $window.scrollTop() < elTop);
+// 	});
 
-});
+// });
 
 $(document).ready(function() {
 	$(".story-wrapper").fitVids();
