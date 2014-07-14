@@ -142,7 +142,27 @@
   top: 10px;
   left: -28px;
 }
+.leaflet-popup-content {
+  font-size: 14px;
+}
 
+
+.leaflet-popup-content p {
+  margin: 0;
+}
+
+.leaflet-popup-content .popup-container {
+  min-width: 125px;
+}
+
+.leaflet-popup-content .popup-name {
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.leaflet-popup-content .popup-leader {
+  font-weight: bold;
+}
 @media screen and (max-width: 767px) {
 
     .map {

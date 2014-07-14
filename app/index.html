@@ -30,8 +30,10 @@
   <!-- endbower -->
   <!-- endbuild -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/app.css">
+  <link rel="stylesheet" type="text/css" href="new-limits-more-money/style.css">
   <!-- endbuild -->
   <script>
 
@@ -174,8 +176,43 @@
       </div>
               <!-- Media: BIG IMAGE -->
       <div class="media">
-        <img src="http://placekitten.com/1088/500" alt="A sign at a construction area in Austin warns workers to wear protective gear. Photo by Callie Richmond.">
-        <p class="caption">A sign at a construction area in Austin warns workers to wear protective gear. Photo by Callie Richmond.</p>
+        <div class="big-block">
+          <div id='map'></div>
+        </div>
+        <div class="small-block">
+          <select id="option-select" class="option-select">
+            <option value="ephc">Expanded Primary Health Care Program</option>
+            <option value="twhp">Texas Women's Health Program</option>
+            <option value="bccs">DSHS Breast and Cervical Cancer Screening Program</option>
+            <option value="fp">DSHS Family Planning Program</option>
+            <option value="tvpd">Title V - Prenatal Dental Services</option>
+            <option value="tvpm">Title V - Prenatal Medical Services</option>
+          </select>
+          <div class='legend' id='legend'>
+            <div class='legend-title'>Number of participating health care providers</div>
+                    <ul class='legend-labels'>
+                       <li>
+                         <div style='background-color:rgb(240,249,232);'></div>
+                      </li>
+                        <li>
+                          <div style='background-color:rgb(186,228,188);'></div>
+                          <p>1</p>
+                      </li>
+                        <li>
+                          <div style='background-color:rgb(123,204,196);'></div>
+                          <p>5</p>
+                      </li>
+                        <li>
+                          <div style='background-color:rgb(67,162,202);'></div>
+                          <p>10</p>
+                      </li>
+                        <li>
+                          <div style='background-color:rgb(8,104,172);'></div>
+                          <p>25</p>
+                      </li>
+                    </ul>
+            </div> 
+          </div>
       </div>
       <div class="prose">
         <p>In its 2013 session, the Legislature sought to mitigate the impact of those cuts with the largest financial package for women&rsquo;s health services in state history, increasing spending to $214 million in the 2014-15 budget from $109 million.</p>
@@ -298,14 +335,26 @@
   </div>
   </div>
 </footer>
+<script type="text/template" id="popup-template">
 
+<div class="popup-container">
+  <header class="popup-name">
+    <h1>Providers: <%= PNTCNT %></h1>
+  </header>
+</div>
 
+</script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+
 <!-- build:js scripts/main.js -->
 <script src="../bower_components/modernizr/modernizr.js"></script>
 <script src="scripts/jquery.fitvids.js"></script>
 <script src="scripts/jquery.flexslider.js"></script>
+<script src="scripts/map_switcher.js"></script>
 <script src="scripts/script.js"></script>
+
 <!-- endbuild -->
 </body>
 </html>

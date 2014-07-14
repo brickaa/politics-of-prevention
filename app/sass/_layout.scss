@@ -39,7 +39,7 @@
 	}
 	.story-container {
 		@include span-columns(12);
-		@include omega();
+		@include pad(1em);
 		.prose {
 			@include span-columns(12);
 			@include media($desktop) {

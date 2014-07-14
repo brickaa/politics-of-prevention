@@ -119,7 +119,7 @@ contractSelectView.setActiveValue(activeRegion.at(0).get("Region"));
 
 var width = $(window).width();
 
-var mapZoom = 5;
+var mapZoom = 6;
 var mapCenter = [31.35, -99.64];
 
 if(width < 767) {
