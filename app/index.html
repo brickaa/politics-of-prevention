@@ -211,7 +211,8 @@
                           <p>25</p>
                       </li>
                     </ul>
-            </div> 
+            </div>
+            <div id="target"></div>
           </div>
       </div>
       <div class="prose">
@@ -336,18 +337,27 @@
   </div>
 </footer>
 <script type="text/template" id="popup-template">
+  <div class="popup-container">
+    <header class="popup-name">
+      <h1>Providers: <%= PNTCNT %></h1>
+    </header>
+  </div>
+</script>
+<script type="text/html" id='table-template'>
+<!--         <% _.each(items,function(model){ %> -->
 
-<div class="popup-container">
-  <header class="popup-name">
-    <h1>Providers: <%= PNTCNT %></h1>
-  </header>
-</div>
-
+<h2><%= model.Program %></h2>
+  <ul>
+    <li>Enrollment: <%= model.Enrollment %></li>
+    <li>Annual Funding: <%= model.Funding %></li>
+    <li>Eligibility requirements: <%= model.Eligibility %></li>
+    <li>Types of covered services: <%= model.Services %></li>
+  </ul>
+<% }); %>
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
-
 <!-- build:js scripts/main.js -->
 <script src="../bower_components/modernizr/modernizr.js"></script>
 <script src="scripts/jquery.fitvids.js"></script>

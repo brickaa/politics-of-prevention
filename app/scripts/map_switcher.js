@@ -1,5 +1,13 @@
+var fpData = [{"ID":"FP","Map":"texastribune.WomensHealth-FP","Program":"Family Planning Program","Enrollment":"About 49,000 women in fiscal year 2013","Eligibility":"Texans of \"child-bearing age\" who have not been sterilized and have incomes at or below 250 percent of the federal poverty line","Funding":"$21.6 million, including $18.8 million in state general revenue and $2.8 million in federal and other funds","Services":"Pelvic exams; STD screening and treatment; HIV screening; diabetes, blood pressure and cholesterol screenings; breast and cervical cancer screenings; clinical breast exams; pap tests (initial and follow-up testing) and contraceptives"}];
+var ephcData = [{"ID":"EPHC","Map":"texastribune.WomensHealth-EPHC","Program":"Expanded Primary Health Care Program","Enrollment":"About 170,000 women annually","Eligibility":"Women 18 and older who are Texas residents and have income at or below 200 percent of the federal poverty line","Funding":"$50 million in state general revenue","Services":"Pelvic exams; STD screening and treatment; HIV screening; diabetes, blood pressure and cholesterol screenings; breast and cervical cancer screening; clinical breast exams; pap tests (initial and follow-up testing); immunizations and contraceptives"}];
+var tvpmData = [{"ID":"TVPM","Map":"texastribune.WomensHealth-TVPM","Program":"Title V Prenatal","Enrollment":"About 14,000 women in fiscal year 2013","Eligibility":"Women of \"child-bearing age\" who are Texas residents and have income at or below 185 percent of the federal poverty line","Funding":"$1.2 million in state general revenue, plus $291,000 in federal matching funds","Services":"Pelvic exams; STD screening and treatment; HIV screening; diabetes, blood pressure and cholesterol screenings; pap tests; prenatal labs; ultrasounds;  dental services and a post-partum visit"}];
+var tvpdData = [{"ID":"TVPD","Map":"texastribune.WomensHealth-TVPD","Program":"Title V Prenatal","Enrollment":"About 14,000 women in fiscal year 2013","Eligibility":"Women of \"child-bearing age\" who are Texas residents and have income at or below 185 percent of the federal poverty line","Funding":"$1.2 million in state general revenue, plus $291,000 in federal matching funds","Services":"Pelvic exams; STD screening and treatment; HIV screening; diabetes, blood pressure and cholesterol screenings; pap tests; prenatal labs; ultrasounds;  dental services and a post-partum visit"}];
+var bccsData = [{"ID":"BCCS","Map":"texastribune.WomensHealth-BCCS","Program":"Breast and Cervical Cancer Screening","Enrollment":"About 43,000 women in fiscal year 2013","Eligibility":"Women 21 to 64 who are Texas residents and have incomes at or below 200 percent of the federal poverty line","Funding":"$2.9 million in state general revenue, plus $9.4 million in federal funds","Services":"Pelvic exams; blood pressure screenings; breast and cervical cancer screenings; clinical breast exams; pap tests (initial and follow-up testing); mammograms; diagnostic services for women with abnormal breast or cervical cancer test results; cervical dysplasia treatment and individualized case management"}];
+
+var template = $("#table-template").html(); //script ID
+$("#target").html(_.template(template,{items:ephcData})); //html ID
+
 //Create and add new Map Layer with gridLayer data
-console.log("hi");
 function prepareLayers(baseLayer, retinaBaseLayer, displayLayer) {
   var layer = L.mapbox.tileLayer(baseLayer + ',' + displayLayer, {
     detectRetina: true,
@@ -28,6 +36,7 @@ var mapCenter = [31.35, -99.64];
 var popup = L.popup();
 //Assign Popup Template to Underscore Template (in HTML)
 var popupTemplate = _.template($('#popup-template').html());
+var tableTemplate = _.template($('#table-template').html());
 //Assign #option-select in HTML to JQuery function
 var $optionSelect = $('#option-select');
 var activeLayer;
@@ -67,28 +76,28 @@ function findVal(activeMap) {
   }
   if(activeMap === 'bccs') {
     activeLayer = bccs;
+    $("#target").html(_.template(template,{items:bccsData}));
   }
-
   if(activeMap === 'fp') {
     activeLayer = fp;
+    $("#target").html(_.template(template,{items:fpData}));
   }
-
   if(activeMap === 'twhp') {
     activeLayer = twhp;
+    $("#target").html(_.template(template,{items:twhpData}));
   }
-
   if(activeMap === 'tvpm') {
     activeLayer = tvpm;
+    $("#target").html(_.template(template,{items:tvpmData}));
   }
-
   if(activeMap === 'ephc') {
     activeLayer = ephc;
+    $("#target").html(_.template(template,{items:ephcData}));
   }
-
   if(activeMap === 'tvpd') {
     activeLayer = tvpd;
+    $("#target").html(_.template(template,{items:tvpdData}));
   }
-
   map.addLayer(activeLayer);
 }
 
