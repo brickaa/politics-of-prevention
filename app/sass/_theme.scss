@@ -205,12 +205,36 @@ body {
 	h3.button { //button
 		color: $dk_teal;
 	}
+  h4 {
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: .5em;
+
+    @include media($desktop) {
+      font-size: 1.25em;
+    }
+  }
 	p {
 		font-weight: normal;
 		color: $dk_gray;
 		font: 400 1em Georgia;
 		line-height: 1.4em;
 	}
+  p.caption { 
+    color: $lt_gray;
+    font: 500 0.8em Helvetica;
+    text-align: left;
+    margin: 0.25em;
+    @include media($desktop) {
+      margin: 0.25em 0;
+    }
+  }
+  p.data-subheader {
+    color: $dk_gray;
+    font: 600 0.9em Helvetica;
+    line-height: 1.4em;
+    margin: 0.25em 0;    
+  }
 	hr.yellow {
 		border-top: 1px solid $yellow;
 		text-decoration: none;
@@ -322,15 +346,6 @@ body {
 			margin: 0 0 0.5em 0;
 		}			
 	}
-	.caption { 
-		color: $lt_gray;
-		font: 500 0.8em Helvetica;
-		text-align: left;
-		margin: 0.25em;
-		@include media($desktop) {
-			margin: 0.25em 0;
-		}
-	}
 	.block-text {
 		border-bottom: 1px solid $yellow;
 		border-top: 1px solid $yellow;
@@ -433,12 +448,6 @@ td {
     &:first-child {
       font-size: 1em;
       font-weight: 800;
-    }
-
-    &[data-title] {
-      &:first-child:before {
-        content: none;
-      }
     }
 
     &:before {
