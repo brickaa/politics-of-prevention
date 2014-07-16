@@ -156,7 +156,7 @@
               <a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1q5Y4Vr" title="share on Facebook" class="social-share" target="_blank">
               <i class="fa fa-facebook"></i>
               </a>
-              <p>What politicians don't say about TX Miracle: TX leads in worker fatalities and workers have few protections.</p>
+              <p>The Politics of Prevention: How Texas politics have impacted women's access to care.</p>
             </li>
             <li>
               <a href="https://twitter.com/home?status=For%20many%20injured%20Texas%20workers,%20the%20promised%20benefits%20of%20workers%E2%80%99%20comp%20never%20materialize.%20http://trib.it/1q5Y4Vr" title="share on Twitter" class="social-share" target="_blank">
@@ -165,7 +165,7 @@
               <a href="http://www.facebook.com/sharer.php?u=http%3A//trib.it/1q5Y4Vr" title="share on Facebook" class="social-share" target="_blank">
               <i class="fa fa-facebook"></i>
               </a>
-              <p>For many injured Texas workers, the promised benefits of workers’ comp never materialize.</p>
+              <p>Check out Texas Tribune's series on how state politics have impacted women's access to health care.</p>
             </li>
           </ul>
         </div>
@@ -190,30 +190,32 @@
           </select>
           <div class='legend' id='legend'>
             <div class='legend-title'>Number of participating health care providers</div>
-                    <ul class='legend-labels'>
-                       <li>
-                         <div style='background-color:rgb(240,249,232);'></div>
-                      </li>
-                        <li>
-                          <div style='background-color:rgb(186,228,188);'></div>
-                          <p>1</p>
-                      </li>
-                        <li>
-                          <div style='background-color:rgb(123,204,196);'></div>
-                          <p>5</p>
-                      </li>
-                        <li>
-                          <div style='background-color:rgb(67,162,202);'></div>
-                          <p>10</p>
-                      </li>
-                        <li>
-                          <div style='background-color:rgb(8,104,172);'></div>
-                          <p>25</p>
-                      </li>
-                    </ul>
-            </div>
-            <div id="target"></div>
+            <ul class='legend-labels'>
+               <li>
+                 <div style='background-color:rgb(240,249,232);'></div>
+              </li>
+                <li>
+                  <div style='background-color:rgb(186,228,188);'></div>
+                  <p>1</p>
+              </li>
+                <li>
+                  <div style='background-color:rgb(123,204,196);'></div>
+                  <p>5</p>
+              </li>
+                <li>
+                  <div style='background-color:rgb(67,162,202);'></div>
+                  <p>10</p>
+              </li>
+                <li>
+                  <div style='background-color:rgb(8,104,172);'></div>
+                  <p>25</p>
+              </li>
+            </ul>
           </div>
+          <table>
+            <tbody id="target"></tbody>
+          </table>
+        </div>
       </div>
       <div class="prose">
         <p>In its 2013 session, the Legislature sought to mitigate the impact of those cuts with the largest financial package for women&rsquo;s health services in state history, increasing spending to $214 million in the 2014-15 budget from $109 million.</p>
@@ -345,14 +347,18 @@
 </script>
 <script type="text/html" id='table-template'>
 <!--         <% _.each(items,function(model){ %> -->
-
-<h2><%= model.Program %></h2>
-  <ul>
-    <li>Enrollment: <%= model.Enrollment %></li>
-    <li>Annual Funding: <%= model.Funding %></li>
-    <li>Eligibility requirements: <%= model.Eligibility %></li>
-    <li>Types of covered services: <%= model.Services %></li>
-  </ul>
+    <tr>
+      <td><strong>Enrollment</strong></td><td><%= model.Enrollment %></td>
+    </tr>
+    <tr>
+      <td><strong>Annual Funding</strong></td><td><%= model.Funding %></td>
+    </tr>
+    <tr>
+      <td><strong>Eligibility requirements</strong></td><td><%= model.Eligibility %></td>
+    </tr>
+    <tr>
+      <td><strong>Types of covered services</strong></td><td><%= model.Services %></td>
+    </tr>
 <% }); %>
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
