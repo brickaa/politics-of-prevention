@@ -334,27 +334,19 @@
 </footer>
 <script id="table-row-totals" type="text/template">
   <tr>
-    <th class="chart-legend-2013">Total Awarded</th><td>$<%= commas(Award) %></td>
+    <td class="chart-legend-2013">Total Awarded</td><td>$<%= commas(Award) %></td>
   </tr>
   <tr>  
-    <th class="chart-legend-2012">Total Anticipated Clients</th><td><%= commas(TotC) %></td>
+    <td class="chart-legend-2012">Total Anticipated Clients</td><td><%= commas(TotC) %></td>
   </tr>
   <tr>
-    <th class="chart-legend-2013">Percent of Clients Expected to Receive Family Planning</th><td><%= PctFP %>%</td>
+    <td class="chart-legend-2013">Percent of Clients Expected to Receive Family Planning</td><td><%= PctFP %>%</td>
   </tr>
     <tr>
-    <th class="chart-legend-2013">Anticipated Family Planning Clients</th><td><%= NumFPS  %></td>
+    <td class="chart-legend-2013">Anticipated Family Planning Clients</td><td><%= NumFPS  %></td>
   </tr>
 </script>
-<script id="table-row-contracts" type="text/template">
-  <tr>
-    <td><%= Name %></td>
-    <td>$<%= commas(Award) %></td>
-    <td><%= commas(TotC) %></td>
-    <td><%= PctFP %>%</td>
-    <td><%= commas(NumFP) %></td>
-  </tr>
-</script>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <!-- build:js ../scripts/main.js -->
 <script src="../../bower_components/modernizr/modernizr.js"></script>

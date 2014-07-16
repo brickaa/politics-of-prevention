@@ -376,94 +376,85 @@ body {
 	display: none;
 }
 table {
-  display: block;
   font-family: $base-sans-serif;
-  font-size: .875em;
-  margin-bottom: 1em;
+  font-size: 1em;
+  margin-bottom: 2em;
   width: 100%;
 
-  @include media($desktop) {
-    display: table;
-    font-size: 1em;
+  @include media($mobile) {
+    border-top: 1px solid rgb(187, 187, 187);
+    display: block;
+    font-size: .875em;
   }
 }
 
 thead {
-  display: none;
-  @include media($desktop) {
-    display: table-header-group;
+  @include media($mobile) {
+    display: none;
   }
 }
 
 tbody {
-  display: block;
-
-  @include media($desktop) {
-    display: table-row-group;
+  @include media($mobile) {
+    display: block;
   }
 }
 
 th {
-  display: block;
+  border-bottom: 1px solid rgb(187, 187, 187);
+  font-size: 1em;
+  font-weight: 800;
+  padding: 0 12px 8px;
+  text-align: right;
+  vertical-align: middle;
 
-  @include media($desktop) {
-    border-bottom: 1px solid rgb(187, 187, 187);
-    display: table-cell;
-    font-size: 1em;
-    font-weight: 800;
-    padding: 0 12px 8px;
-    text-align: right;
-    vertical-align: middle;
+  &:first-child {
+    text-align: left;
+  }
 
-    &:first-child {
-      text-align: left;
-    }
+  @include media($mobile) {
+    display: block;
   }
 }
 
 td {
-  display: block;
+  font-size: .875em;
+  padding: 8px 12px;
+  text-align: right;
 
   &:first-child {
-    font-weight: 800;
+    text-align: left;
   }
 
-  &[data-title] {
-    &:first-child:before {
-      content: none;
+  @include media($mobile) {
+    display: block;
+    text-align: left;
+
+    &:first-child {
+      font-size: 1em;
+      font-weight: 800;
     }
 
-    &:before {
-      content: attr(data-title) ': ';
-      font-weight: 800;
-
-      @include media($desktop) {
+    &[data-title] {
+      &:first-child:before {
         content: none;
       }
     }
-  }
 
-  @include media($desktop) {
-    display: table-cell;
-    font-size: .875em;
-    padding: 8px 12px;
-    text-align: right;
-
-    &:first-child {
-      text-align: left;
+    &:before {
+      content: attr(data-title) ' ';
+      font-weight: 800;
     }
   }
 }
 
 tr {
-  display: block;
-
   &:nth-child(odd) td {
     background-color: rgb(240, 240, 240);
   }
 
-  @include media($desktop) {
-    display: table-row;
+  @include media($mobile) {
+    display: block;
   }
 }
 
