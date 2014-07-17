@@ -8,7 +8,7 @@
 	.nav-bar {
 		ul {
 			@include span-columns(12);
-			@include pad(1em);
+			@include pad(0);
 			li {
 				@include span-columns(12 of 12);
 				@include media($desktop) {
