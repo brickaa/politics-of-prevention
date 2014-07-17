@@ -393,7 +393,7 @@ body {
 table {
   font-family: $base-sans-serif;
   font-size: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   width: 100%;
 
   @include media($mobile) {
