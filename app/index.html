@@ -302,8 +302,8 @@
     </header>
   </div>
 </script>
-<script type="text/html" id='table-template'>
-<!--         <% _.each(items,function(model){ %> -->
+<script type="text/template" id='table-template'>
+<% _.each(items,function(model){ %>
     <tr>
       <td><strong>Enrollment</strong></td><td><%= model.Enrollment %></td>
     </tr>
@@ -321,13 +321,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+<script src="scripts/mapSwitcher.js"></script>
 <!-- build:js scripts/main.js -->
 <script src="../bower_components/modernizr/modernizr.js"></script>
 <script src="scripts/jquery.fitvids.js"></script>
-<script src="scripts/jquery.flexslider.js"></script>
-<script src="scripts/mapSwitcher.js"></script>
 <script src="scripts/script.js"></script>
-
 <!-- endbuild -->
 </body>
 </html>

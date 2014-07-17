@@ -5,8 +5,8 @@ var tvpmData = [{"ID":"TVPM","Map":"texastribune.WomensHealth-TVPM","Program":"T
 var tvpdData = [{"ID":"TVPD","Map":"texastribune.WomensHealth-TVPD","Program":"Title V Prenatal","Enrollment":"About 14,000 women in fiscal year 2013 in the combined Title V prenatal medical and dental programs","Eligibility":"Women of \"child-bearing age\" who are Texas residents and have income at or below 185 percent of the federal poverty line","Funding":"$1.2 million in state general revenue, plus $291,000 in federal matching funds","Services":"Pelvic exams; STD screening and treatment; HIV screening; diabetes, blood pressure and cholesterol screenings; pap tests; prenatal labs; ultrasounds;  dental services and a post-partum visit"}];
 var bccsData = [{"ID":"BCCS","Map":"texastribune.WomensHealth-BCCS","Program":"Breast and Cervical Cancer Screening","Enrollment":"About 43,000 women in fiscal year 2013","Eligibility":"Women 21 to 64 who are Texas residents and have incomes at or below 200 percent of the federal poverty line","Funding":"$2.9 million in state general revenue, plus $9.4 million in federal funds","Services":"Pelvic exams; blood pressure screenings; breast and cervical cancer screenings; clinical breast exams; pap tests (initial and follow-up testing); mammograms; diagnostic services for women with abnormal breast or cervical cancer test results; cervical dysplasia treatment and individualized case management"}];
 
-var template = $("#table-template").html(); //script ID
-$("#target").html(_.template(template,{items:ephcData})); //html ID
+var templateTable = $("#table-template").html(); //script ID
+$("#target").html(_.template(templateTable,{items:ephcData})); //html ID
 
 //Create and add new Map Layer with gridLayer data
 function prepareLayers(baseLayer, retinaBaseLayer, displayLayer) {
@@ -37,7 +37,6 @@ var mapCenter = [31.35, -99.64];
 var popup = L.popup();
 //Assign Popup Template to Underscore Template (in HTML)
 var popupTemplate = _.template($('#popup-template').html());
-var tableTemplate = _.template($('#table-template').html());
 //Assign #option-select in HTML to JQuery function
 var $optionSelect = $('#option-select');
 var activeLayer;
@@ -77,27 +76,27 @@ function findVal(activeMap) {
   }
   if(activeMap === 'bccs') {
     activeLayer = bccs;
-    $("#target").html(_.template(template,{items:bccsData}));
+    $("#target").html(_.template(templateTable,{items:bccsData}));
   }
   if(activeMap === 'fp') {
     activeLayer = fp;
-    $("#target").html(_.template(template,{items:fpData}));
+    $("#target").html(_.template(templateTable,{items:fpData}));
   }
   if(activeMap === 'twhp') {
     activeLayer = twhp;
-    $("#target").html(_.template(template,{items:twhpData}));
+    $("#target").html(_.template(templateTable,{items:twhpData}));
   }
   if(activeMap === 'tvpm') {
     activeLayer = tvpm;
-    $("#target").html(_.template(template,{items:tvpmData}));
+    $("#target").html(_.template(templateTable,{items:tvpmData}));
   }
   if(activeMap === 'ephc') {
     activeLayer = ephc;
-    $("#target").html(_.template(template,{items:ephcData}));
+    $("#target").html(_.template(templateTable,{items:ephcData}));
   }
   if(activeMap === 'tvpd') {
     activeLayer = tvpd;
-    $("#target").html(_.template(template,{items:tvpdData}));
+    $("#target").html(_.template(templateTable,{items:tvpdData}));
   }
   map.addLayer(activeLayer);
 }
