@@ -17,9 +17,9 @@ if(width < 520) {
   markerRadius -= 2;
 }
 
-if(width > 480) {
-  $('#mapLegendContainer').addClass('mapLegendOnMap').appendTo("#map");
-}
+// if(width > 480) {
+//   $('#mapLegendContainer').addClass('mapLegendOnMap').appendTo("#map");
+// }
 
 var layer = L.mapbox.tileLayer('texastribune.map-f9zh0xcn', {
   detectRetina: true,
@@ -69,65 +69,7 @@ var Facilities = Backbone.Collection.extend({
 
 var facilities = new Facilities(data);
 
-// var FacilityRow = Backbone.View.extend({
-//   tagName: 'tr',
-
-//   template: _.template($('#row-template').html()),
-
-//   events: {
-//     'click .view-on-map': 'zoomMap'
-//   },
-
-//   render: function() {
-//     this.$el.html(this.template(this.model.toJSON()));
-//     return this;
-//   },
-
-//   zoomMap: function() {
-//     var top = $(document).scrollTop();
-//     var mapTop = $('#map').offset().top - 10;
-
-//     if(top > mapTop) {
-//       $('html, body').animate({
-//         scrollTop: mapTop
-//       }, 300);
-//     }
-//     map.setView(this.model.get('loc'), 11);
-//     this.model.get('marker').openPopup();
-//   }
-
-// });
-
-// var FacilityTableBundle = Backbone.View.extend({
-//   el: '#facility-rows',
-
-//   initialize: function() {
-//     this.addAllToList(facilities);
-//   },
-
-//   addAllToList: function(coll) {
-//     var payload = [];
-//     coll.each(function(c) {
-//       var view = new FacilityRow({model: c});
-//       payload.push(view.render().el);
-//     });
-
-//     this.$el.html(payload);
-
-//     TableSift.init('sortable', {
-//       customSort: {
-//         4: function(t, el) {
-//           return isNaN(Date.parse(t)) ? 0 : Date.parse(t);
-//         }
-//       }
-//     });
-
-//   }
-// });
-
 var popupTemplate = _.template($('#popup-template').html());
-
-// new FacilityTableBundle();
 
 facilities.each(function(c) {
   var loc = c.get('loc');
