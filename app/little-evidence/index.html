@@ -25,16 +25,12 @@
   <meta property="og:image" content="http://s3.amazonaws.com/static.texastribune.org/media/images/2013/09/13/PoliticsOfPrevention-B_jpg_635x1000_q100.jpg">
   <link rel="shortcut icon" href="/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
-  <link rel="stylesheet" href="//s3.amazonaws.com/cdn.texastribune.org/lib/tablesift/0.0.7/tablesift.css">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" href="//s3.amazonaws.com/cdn.texastribune.org/lib/tablesift/0.0.7/tablesift.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <!-- build:css ../styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../../bower_components/normalize-css/normalize.css" />
-    <!--[if lte IE 8]>
-    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' />
-    <![endif]-->
-    
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- endbower -->
     <!-- endbuild -->
@@ -164,9 +160,9 @@
         </div>
         <div class="small-block">
           <p class="data-subheader">This interactive map shows the inspection records for each facility reviewd by the Tribune for this investigation. Since this interactive map was <a href="https://www.texastribune.org/library/data/abortion-facility-safety-records/">published</a> in September 2013, additional abortion facilities have closed.</em></p>
-          <div class="mapLegendContainer" id="mapLegendContainer">
-            <div class="legendScale">
-                <ul class="legendLabels">
+          <div>
+            <div class="legend-scale">
+                <ul class="legend-scale">
                     <li><span style="background:rgb(27, 158, 119);"></span>Open Facility</li>
                     <li><span style="background:rgb(217, 95, 2);"></span>Closed Facility</li>
                     <li><span style="background:rgb(117, 112, 179);"></span>Facility No Longer Performs Abortions</li>
@@ -299,9 +295,9 @@
     <div class="popup-container">
       <p class="popup-name"><%= Provider %> (<%= City %>)</p>
       <ul>
-        <li><span class="popup-leader">Meets New Building Requirements</span> <%= ACS %></li>
-        <li><span class="popup-leader">Status</span> <%= ClosedClosing %></li>
-        <li><span class="popup-leader">Last Inspection</span> <%= SurveyDate %> <% if(DocCloudURL) { %>(<a href="<%= DocCloudURL %>" target="_blank">View Record</a>) <% } %></li>
+        <li><span class="popup-leader">Meets New Building Requirements: </span> <%= ACS %></li>
+        <li><span class="popup-leader">Status: </span> <%= ClosedClosing %></li>
+        <li><span class="popup-leader">Last Inspection: </span> <%= SurveyDate %> <% if(DocCloudURL) { %>(<a href="<%= DocCloudURL %>" target="_blank">View Record</a>) <% } %></li>
       <ul>
     </div>
   </script>
